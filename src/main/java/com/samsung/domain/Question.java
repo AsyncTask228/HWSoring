@@ -1,0 +1,25 @@
+package com.samsung.domain;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+public class Question {
+
+    private String question;
+    private String answer;
+
+    public String getQuestion() {
+
+        return question;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    @Override
+    public String toString() {
+        return question + " " + answer;
+    }
+
+}
