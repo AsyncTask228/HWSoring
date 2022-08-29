@@ -2,6 +2,9 @@ package com.samsung.dao;
 
 
 import com.samsung.domain.Question;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Repository;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -11,12 +14,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings("resources")
+@Repository
+@PropertySource({"application.yml"})
 public class QuestionDaoSimple implements QuestionDao {
 
     private List<Question> questions;
     private final String pathToCsv;
 
-    public QuestionDaoSimple(String pathToCsv) {
+    public QuestionDaoSimple(@Value("${csvPath}") String pathToCsv) {
         this.pathToCsv = pathToCsv;
     }
 

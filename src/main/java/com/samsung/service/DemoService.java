@@ -2,18 +2,27 @@ package com.samsung.service;
 
 import com.samsung.domain.Question;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Scanner;
 
 @RequiredArgsConstructor
+@Service
 public class DemoService {
 
-    private final QuestionService questionService;
+    private final TestService testService;
 
     public void demo() {
 
-        List<Question> questionList = questionService.getAll();
+        System.out.println("Enter your name:");
+        testService.editName();
 
-        questionList.forEach((q) -> System.out.println(q.getQuestion()));
+        System.out.println("We wish you successful testing!");
+        testService.test();
+
+        testService.showMark();
+
     }
+
 }

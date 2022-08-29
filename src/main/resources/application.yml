@@ -1,0 +1,2 @@
+csvPath: src/main/resources/data/questions.csv
+thresholdPfPassage: 3
