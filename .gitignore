@@ -35,3 +35,4 @@ build/
 /spring-shell.log
 .mvn
 /mvnw
+/mvnw.cmd
