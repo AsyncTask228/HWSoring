@@ -16,12 +16,13 @@ import java.util.List;
 @SuppressWarnings("resources")
 @Repository
 @PropertySource({"application.yml"})
-public class QuestionDaoSimple implements QuestionDao {
+public class    QuestionDaoSimple implements QuestionDao {
 
     private List<Question> questions;
     private final String pathToCsv;
 
     public QuestionDaoSimple(@Value("${csvPath}") String pathToCsv) {
+
         this.pathToCsv = pathToCsv;
     }
 
@@ -52,6 +53,9 @@ public class QuestionDaoSimple implements QuestionDao {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+
         return questions;
     }
 }

@@ -3,7 +3,7 @@ package com.samsung.domain;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public class Question {
+public class  Question {
 
     private String question;
     private String answer;
